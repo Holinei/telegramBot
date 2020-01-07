@@ -9,7 +9,6 @@ public class Main {
         TelegramBotsApi telegramBotsApi = new TelegramBotsApi();
 
         Bot bot = new Bot();
-
         try{
             telegramBotsApi.registerBot(bot);
         }catch (TelegramApiRequestException e){

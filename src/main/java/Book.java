@@ -10,13 +10,13 @@ import java.io.IOException;
 public class Book {
     private Document document;
 
-    public Book() {
-        connect();
+    public Book(String href) {
+        connect(href);
     }
 
-    private void connect() {
+    private void connect(String href) {
     try {
-        document =  Jsoup.connect("https://www.surgebook.com/miami_miami/book/student-iz-preispodney").get();
+        document =  Jsoup.connect(href).get();
     }catch (Exception e){
         e.printStackTrace();
     }
